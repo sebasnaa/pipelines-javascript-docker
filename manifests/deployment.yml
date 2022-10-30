@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sebasnaapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sebasnaapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sebasnaapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sebasnaapipelinesjavascriptdocker 
+          image: containersebasregistry.azurecr.io/sebasnaapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
